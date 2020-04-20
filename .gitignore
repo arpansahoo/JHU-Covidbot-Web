@@ -1,0 +1,6 @@
+deploy.sh
+dist/*
+node_modules/*
+.DS_Store
+.github/FUNDING.yml
+deploy.sh
