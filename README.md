@@ -1,16 +1,16 @@
-## User interface (Vue.js) for the JHU COVID-19 Q&A Chatbot
-
-Researchers at the Johns Hopkins University created a chatbot (built with Dialogflow) to help answer questions about COVID-19. To learn more about the chatbot, go [here](https://jhu-covid-qa.github.io/).
+## User interface for the JHU COVID-19 Q&A Chatbot
+This is the web interface (written in Vue) for Johns Hopkins' COVID-19 chatbot. It features a chat screen and message input. This client-side interface sends user queries to the Dialogflow agent and fetches responses. 
 
 ### Installation
-Clone the repository. Run this command 
+Clone the repostiory.
+
+Make sure to have npm and NodeJS installed. You may want to remove package-lock.json. Then install all dependencies by running this command 
 ```
 npm i
 ```
 
 ### Developing
-Use either npm or yarn to start the development server.
-
+Use npm or yarn to start the development server.
 npm:
 ```
 npm run serve
@@ -20,17 +20,14 @@ yarn:
 yarn serve
 ```
 
-### Miscellaneous
-Configuration settings (e.g. Dialogflow Gateway url and start suggestions) are in src/Config/index.js.
+### Codebase
+The main Vue app is located src/Views/App.vue. This contains the code for displaying the header, chat screen (fulfillment text, list select cards, etc.), and chat input. It also contains the code for sending user requests to the Gateway and fetching responses.
 
-Welcome screen can be edited in src/Views/Welcome.vue
+src/Components contains Vue components used in this app. You can edit the style of each component within each vue file contained in the Components folder.
 
-Chatbot app screen can be edited in src/Views/App.vue
+To make changes to the theme, go to src/Style.
 
-Vue component involved in user input can be editied in src/Components/Parts/ChatInput.vue
-
-### Deploying
-Please file an issue or contact me if you'd like to deploy your changes to the live site.
+The Dialogflow agent url is included as an endpoint in src/Config/index.js. 
 
 ### Preview
 ![](/preview.png)
