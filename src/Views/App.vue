@@ -13,11 +13,13 @@
         </TopHead>
 
         <section class="container chat-container">
+            <Error v-if="error" :error="error" />
+            
             <RichComponent>
                 <Bubble :text="'Greetings! I am here to help answer your questions about COVID-19. To make sure that I understand your question, please keep the question simple. The information that you share with me will be used to support research, education, and technology development. Please do not share any personally identifiable information (like your name, location, or age) with me. So, let\'s get started! You could start by asking me one of the questions below, or a new question:'" />
             </RichComponent>
             <!-- Messages Table -->
-            <section aria-live="polite">
+            <section v-if="messages" aria-live="polite">
                 <div v-for="message in messages" id="message" :key="message.responseId">
                     <!-- My message -->
                     <BubbleWrapper><Bubble v-if="message.queryResult.queryText" :text="message.queryResult.queryText" me /></BubbleWrapper>
@@ -56,12 +58,12 @@
                                 :subtitle="component.listSelect.subtitle">
                                 <ListItem
                                     v-for="item in component.listSelect.items"
-                                    :key="item.optionInfo.key"
+                                    :key="item.info.key"
                                     :title="item.title"
                                     :description="item.description"
                                     :image-uri="item.image.url"
                                     :image-title="item.image.accessibilityText"
-                                    @click.native="send({text: item.optionInfo.key})"
+                                    @click.native="send({text: item.info.key})"
                                 />
                             </List>
                         </RichComponent>
@@ -103,14 +105,12 @@
                 https://cloud.google.com/dialogflow/docs/reference/rest/v2beta1/projects.agent.intents#QuickReplies
                 https://cloud.google.com/dialogflow/docs/reference/rest/v2beta1/projects.agent.intents#Suggestions
             -->
-            <span v-if="suggestions.text_suggestions">
-                <Suggestion
-                    v-for="(suggestion, index) in suggestions.text_suggestions"
-                    :key="index"
-                    :title="suggestion"
-                    @click.native="send({text: suggestion})"
-                />
-            </span>
+            <Suggestion
+                v-for="(suggestion, suggestion_id) in suggestions.text_suggestions"
+                :key="suggestion_id"
+                :title="suggestion"
+                @click.native="send({text: suggestion})"
+            />
 
             <!-- Link suggestion chips
                 https://developers.google.com/actions/assistant/responses#suggestion_chips
