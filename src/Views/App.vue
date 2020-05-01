@@ -16,7 +16,7 @@
             <Error v-if="error" :error="error" />
             
             <RichComponent>
-                <Bubble :text="'Greetings! I am here to help answer your questions about COVID-19. To make sure that I understand your question, please keep the question simple. The information that you share with me will be used to support research, education, and technology development. Please do not share any personally identifiable information (like your name, location, or age) with me. So, let\'s get started! You could start by asking me one of the questions below, or a new question:'" />
+                <Bubble :text="'Greetings! I’m an informational chatbot. Please ask me questions relating to COVID-19. The health information you share with us will be used for research, education and to improve this system. We care about your privacy and will never ask you to share any personal information.'" />
             </RichComponent>
             <!-- Messages Table -->
             <section v-if="messages" aria-live="polite">

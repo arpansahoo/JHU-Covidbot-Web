@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: ushaflow-web
+  name: jhu-covid19bot-web
 spec:
   rules:
   - host: example.com
@@ -9,5 +9,5 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: ushaflow-web
+          serviceName: jhu-covid19bot-web
           servicePort: http

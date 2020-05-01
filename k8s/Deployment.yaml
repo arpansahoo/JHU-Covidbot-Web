@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ushaflow-web
+  name: jhu-covid19bot-web
 spec:
   selector:
     matchLabels:
-      app: ushaflow-web
+      app: jhu-covid19bot-web
   template:
     metadata:
       labels:
-        app: ushaflow-web
+        app: jhu-covid19bot-web
     spec:
       containers:
-      - name: ushaflow-web
-        image: docker.pkg.github.com/mishushakov/dialogflow-web-v2/dialogflow-web-v2
+      - name: jhu-covid19bot-web
+        image: docker.pkg.github.com/arpansahoo/jhu-covid19bot-web

@@ -1,10 +1,10 @@
 apiVersion: v1.5
 kind: Service
 metadata:
-  name: ushaflow-web
+  name: jhu-covid19bot-web
 spec:
   selector:
-    app: ushaflow-web
+    app: jhu-covid19bot-web
   ports:
   - name: http
     targetPort: 80

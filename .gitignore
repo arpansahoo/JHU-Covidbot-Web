@@ -4,3 +4,4 @@ node_modules/*
 .DS_Store
 .github/FUNDING.yml
 deploy.sh
+package-lock.json

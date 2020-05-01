@@ -3,7 +3,7 @@
         <img class="app-icon" src="../../../public/img/logo.png" :alt="'JHU'">
         <div class="app-info">
             <div class="app-name">COVID-19 Q&A Chatbot</div>
-            <div class="app-poweredby">From <a target="_blank" rel="noopener noreferrer" href="https://jhu-covid-qa.github.io/" aria-hidden="true">The Johns Hopkins University CLSP</a></div>
+            <div class="app-poweredby">From The Johns Hopkins University CLSP</div>
         </div>
         <slot />
     </header>
@@ -40,6 +40,10 @@
             line-height: 15px
             padding-bottom: 2px
 
+            a[href]
+                color: var(--text)
+                text-decoration: none
+
         .app-poweredby
             color: var(--text-secondary)
             font-size: 14px
@@ -47,9 +51,6 @@
             a[href]
                 color: var(--text-secondary)
                 text-decoration: none
-                transition: color 300ms 
-                &:hover
-                    color: var(--text-tertiary)
 
 .audio-toggle
     @include reset
