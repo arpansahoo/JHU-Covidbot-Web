@@ -1,11 +1,11 @@
 <template>
-    <div class="overlay">
-        <!-- Error Icon -->
-        <i class="material-icons error-icon" aria-hidden="true">error</i>
+  <div class="overlay">
+    <!-- Error Icon -->
+    <i class="material-icons error-icon" aria-hidden="true">error</i>
 
-        <!-- Error Description -->
-        <pre class="error-description">{{error}}</pre>
-    </div>
+    <!-- Error Description -->
+    <pre class="error-description">{{ error }}</pre>
+  </div>
 </template>
 
 <style lang="sass" scoped>
@@ -28,12 +28,12 @@
 
 <script>
 export default {
-    name: 'Error',
-    props: {
-        error: {
-            type: String,
-            default: null
-        }
-    }
-}
+  name: "Error",
+  props: {
+    error: {
+      type: String,
+      default: null,
+    },
+  },
+};
 </script>

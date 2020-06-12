@@ -1,5 +1,5 @@
 <template>
-    <img class="picture" :src="uri" :alt="title">
+  <img class="picture" :src="uri" :alt="title" />
 </template>
 
 <style lang="sass" scoped>
@@ -14,16 +14,16 @@
 
 <script>
 export default {
-    name: 'Picture',
-    props: {
-        uri: {
-            type: String,
-            default: null
-        },
-        title: {
-            type: String,
-            default: null
-        }
-    }
-}
+  name: "Picture",
+  props: {
+    uri: {
+      type: String,
+      default: null,
+    },
+    title: {
+      type: String,
+      default: null,
+    },
+  },
+};
 </script>

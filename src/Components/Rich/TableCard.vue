@@ -1,22 +1,27 @@
 <template>
-    <div class="table-card">
-        <img v-if="imageUri" class="table-card-image" :src="imageUri" :alt="imageTitle">
-        <div class="table-card-content">
-            <div v-if="title" class="table-card-title">{{title}}</div>
-            <div v-if="subtitle" class="table-card-subtitle">{{subtitle}}</div>
-        </div>
-        <div class="table-card-scrollable">
-            <table class="table-card-table" cellspacing="0" cellpadding="0">
-                <tr>
-                    <th v-for="(head, i) in header" :key="i">{{head.header}}</th>
-                </tr>
-                <tr v-for="(row, i) in rows" :key="i">
-                    <td v-for="cell in row.cells" :key="cell.text">{{cell.text}}</td>
-                </tr>
-            </table>
-        </div>
-        <slot />
+  <div class="table-card">
+    <img
+      v-if="imageUri"
+      class="table-card-image"
+      :src="imageUri"
+      :alt="imageTitle"
+    />
+    <div class="table-card-content">
+      <div v-if="title" class="table-card-title">{{ title }}</div>
+      <div v-if="subtitle" class="table-card-subtitle">{{ subtitle }}</div>
     </div>
+    <div class="table-card-scrollable">
+      <table class="table-card-table" cellspacing="0" cellpadding="0">
+        <tr>
+          <th v-for="(head, i) in header" :key="i">{{ head.header }}</th>
+        </tr>
+        <tr v-for="(row, i) in rows" :key="i">
+          <td v-for="cell in row.cells" :key="cell.text">{{ cell.text }}</td>
+        </tr>
+      </table>
+    </div>
+    <slot />
+  </div>
 </template>
 
 <style lang="sass" scoped>
@@ -83,32 +88,32 @@
 
 <script>
 export default {
-    name: 'TableCard',
-    props: {
-        title: {
-            type: String,
-            default: null
-        },
-        subtitle: {
-            type: String,
-            default: null
-        },
-        imageUri: {
-            type: String,
-            default: null
-        },
-        imageTitle: {
-            type: String,
-            default: null
-        },
-        header: {
-            type: Array,
-            default: null
-        },
-        rows: {
-            type: Array,
-            default: null
-        }
-    }
-}
+  name: "TableCard",
+  props: {
+    title: {
+      type: String,
+      default: null,
+    },
+    subtitle: {
+      type: String,
+      default: null,
+    },
+    imageUri: {
+      type: String,
+      default: null,
+    },
+    imageTitle: {
+      type: String,
+      default: null,
+    },
+    header: {
+      type: Array,
+      default: null,
+    },
+    rows: {
+      type: Array,
+      default: null,
+    },
+  },
+};
 </script>

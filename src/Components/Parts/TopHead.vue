@@ -1,12 +1,12 @@
 <template>
-    <header class="app-head">
-        <img class="app-icon" src="../../../public/img/logo.png" :alt="'JHU'">
-        <div class="app-info">
-            <div class="app-name">COVID-19 Q&A Chatbot</div>
-            <div class="app-poweredby">From The Johns Hopkins University CLSP</div>
-        </div>
-        <slot />
-    </header>
+  <header class="app-head">
+    <img class="app-icon" src="../../../public/img/logo.png" :alt="'JHU'" />
+    <div class="app-info">
+      <div class="app-name">COVID-19 Q&A Chatbot</div>
+      <div class="app-poweredby">From The Johns Hopkins University CLSP</div>
+    </div>
+    <slot />
+  </header>
 </template>
 
 <style lang="sass" scoped>
@@ -70,19 +70,19 @@
 
     &:focus
         outline: 0 !important
-        
+
     &:hover
         padding-right: 20px
 </style>
 
 <script>
 export default {
-    name: 'TopHead',
-    props: {
-        app: {
-            type: Object,
-            default: null
-        }
-    }
-}
+  name: "TopHead",
+  props: {
+    app: {
+      type: Object,
+      default: null,
+    },
+  },
+};
 </script>

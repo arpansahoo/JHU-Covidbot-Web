@@ -1,5 +1,5 @@
 module.exports = {
-    lintOnSave: false,
-    publicPath: '',
-    productionSourceMap: false
-}
+  lintOnSave: false,
+  publicPath: "",
+  productionSourceMap: false,
+};

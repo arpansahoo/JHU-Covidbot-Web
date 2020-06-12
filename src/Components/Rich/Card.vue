@@ -1,13 +1,18 @@
 <template>
-    <div class="card" tabindex="0">
-        <img v-if="imageUri" class="card-image" :src="imageUri" :alt="imageTitle || title">
-        <div class="card-content">
-            <div v-if="title" class="card-title">{{title}}</div>
-            <div v-if="subtitle" class="card-subtitle">{{subtitle}}</div>
-            <div v-if="text" class="card-text">{{text}}</div>
-            <slot />
-        </div>
+  <div class="card" tabindex="0">
+    <img
+      v-if="imageUri"
+      class="card-image"
+      :src="imageUri"
+      :alt="imageTitle || title"
+    />
+    <div class="card-content">
+      <div v-if="title" class="card-title">{{ title }}</div>
+      <div v-if="subtitle" class="card-subtitle">{{ subtitle }}</div>
+      <div v-if="text" class="card-text">{{ text }}</div>
+      <slot />
     </div>
+  </div>
 </template>
 
 <style lang="sass" scoped>
@@ -52,28 +57,28 @@
 
 <script>
 export default {
-    name: 'Card',
-    props: {
-        text: {
-            type: String,
-            default: null
-        },
-        imageUri: {
-            type: String,
-            default: null
-        },
-        imageTitle: {
-            type: String,
-            default: null
-        },
-        subtitle: {
-            type: String,
-            default: null
-        },
-        title: {
-            type: String,
-            default: null
-        }
-    }
-}
+  name: "Card",
+  props: {
+    text: {
+      type: String,
+      default: null,
+    },
+    imageUri: {
+      type: String,
+      default: null,
+    },
+    imageTitle: {
+      type: String,
+      default: null,
+    },
+    subtitle: {
+      type: String,
+      default: null,
+    },
+    title: {
+      type: String,
+      default: null,
+    },
+  },
+};
 </script>

@@ -1,8 +1,10 @@
 <template>
-    <a class="card-button" target="_blank" rel="noopener noreferrer" :href="uri">
-        <i class="material-icons card-button-icon" aria-hidden="true">arrow_forward</i>
-        <span class="card-button-title">{{title}}</span>
-    </a>
+  <a class="card-button" target="_blank" rel="noopener noreferrer" :href="uri">
+    <i class="material-icons card-button-icon" aria-hidden="true"
+      >arrow_forward</i
+    >
+    <span class="card-button-title">{{ title }}</span>
+  </a>
 </template>
 
 <style lang="sass" scoped>
@@ -30,16 +32,16 @@
 
 <script>
 export default {
-    name: 'CardButton',
-    props: {
-        uri: {
-            type: String,
-            default: null
-        },
-        title: {
-            type: String,
-            default: null
-        }
-    }
-}
+  name: "CardButton",
+  props: {
+    uri: {
+      type: String,
+      default: null,
+    },
+    title: {
+      type: String,
+      default: null,
+    },
+  },
+};
 </script>

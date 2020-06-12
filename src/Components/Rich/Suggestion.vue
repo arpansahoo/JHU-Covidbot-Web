@@ -1,13 +1,14 @@
 <template>
-    <a
-        v-if="url"
-        class="suggestion"
-        target="_blank"
-        rel="noopener noreferrer"
-        :href="url">
-        {{title}}
-    </a>
-    <button v-else class="suggestion">{{title}}</button>
+  <a
+    v-if="url"
+    class="suggestion"
+    target="_blank"
+    rel="noopener noreferrer"
+    :href="url"
+  >
+    {{ title }}
+  </a>
+  <button v-else class="suggestion">{{ title }}</button>
 </template>
 
 <style lang="sass" scoped>
@@ -39,16 +40,16 @@
 
 <script>
 export default {
-    name: 'Suggestion',
-    props: {
-        url: {
-            type: String,
-            default: null
-        },
-        title: {
-            type: String,
-            default: null
-        }
-    }
-}
+  name: "Suggestion",
+  props: {
+    url: {
+      type: String,
+      default: null,
+    },
+    title: {
+      type: String,
+      default: null,
+    },
+  },
+};
 </script>

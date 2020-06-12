@@ -1,5 +1,5 @@
 <template>
-    <div class="bubble-wrapper"><slot /></div>
+  <div class="bubble-wrapper"><slot /></div>
 </template>
 
 <style lang="sass" scoped>
@@ -11,6 +11,6 @@
 
 <script>
 export default {
-    name: 'BubbleWrapper'
-}
+  name: "BubbleWrapper",
+};
 </script>

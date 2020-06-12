@@ -1,5 +1,5 @@
 <template>
-    <div class="component"><slot /></div>
+  <div class="component"><slot /></div>
 </template>
 
 <style lang="sass" scoped>
@@ -14,6 +14,6 @@
 
 <script>
 export default {
-    name: 'RichComponent'
-}
+  name: "RichComponent",
+};
 </script>

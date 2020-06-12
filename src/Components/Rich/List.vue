@@ -1,9 +1,11 @@
 <template>
-    <div class="list">
-        <div v-if="title" class="list-title">{{title}}</div>
-        <div v-if="subtitle" class="list-subtitle">Subtitle</div>
-        <ul :aria-label="title" class="list-content"><slot /></ul>
-    </div>
+  <div class="list">
+    <div v-if="title" class="list-title">{{ title }}</div>
+    <div v-if="subtitle" class="list-subtitle">Subtitle</div>
+    <ul :aria-label="title" class="list-content">
+      <slot />
+    </ul>
+  </div>
 </template>
 
 <style lang="sass" scoped>
@@ -20,7 +22,7 @@
 
     &:focus
         outline: 0 !important
-        
+
     .list-title
         font-weight: 500
         font-size: 16px
@@ -42,16 +44,16 @@
 
 <script>
 export default {
-    name: 'List',
-    props: {
-        title: {
-            type: String,
-            default: null
-        },
-        subtitle: {
-            type: String,
-            default: null
-        }
-    }
-}
+  name: "List",
+  props: {
+    title: {
+      type: String,
+      default: null,
+    },
+    subtitle: {
+      type: String,
+      default: null,
+    },
+  },
+};
 </script>

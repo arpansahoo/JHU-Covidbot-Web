@@ -1,5 +1,7 @@
 <template>
-    <ul class="carousel"><slot /></ul>
+  <ul class="carousel">
+    <slot />
+  </ul>
 </template>
 
 <style lang="sass" scoped>
@@ -33,6 +35,6 @@
 
 <script>
 export default {
-    name: 'CarouselSelect'
-}
+  name: "CarouselSelect",
+};
 </script>

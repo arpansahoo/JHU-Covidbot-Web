@@ -1,24 +1,24 @@
 <template>
-    <div class="bubble" tabindex="0" :class="{'me': me, 'loading': loading}">
-        <p class="a" v-html="text">{{text}}</p>
-        <!-- {{text}} -->
-    </div>
+  <div class="bubble" tabindex="0" :class="{ me: me, loading: loading }">
+    <p class="a" v-html="text">{{ text }}</p>
+    <!-- {{text}} -->
+  </div>
 </template>
 
 <style scoped>
 .a >>> .b {
-    color: #102E70
+  color: #102e70;
 }
 
 .a >>> .b:visited {
-    color: #102E70
+  color: #102e70;
 }
 </style>
 
 <style lang="sass" scoped>
-.text 
+.text
     padding: 0px
-    
+
 .bubble
     margin-bottom: 0px
     max-width: 320px
@@ -40,7 +40,7 @@
 
     &:focus
         outline: 0 !important
-        
+
     &::before
         content: var(--left-bubble)
         position: absolute
@@ -81,19 +81,19 @@
 
 <script>
 export default {
-    name: 'Bubble',
-    props: {
-        text: {
-            type: String,
-            required: false,
-            default: ''
-        },
-        me: {
-            type: Boolean
-        },
-        loading: {
-            type: Boolean
-        }
-    }
-}
+  name: "Bubble",
+  props: {
+    text: {
+      type: String,
+      required: false,
+      default: "",
+    },
+    me: {
+      type: Boolean,
+    },
+    loading: {
+      type: Boolean,
+    },
+  },
+};
 </script>
